@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "FINAL.SUBASTA/1.0.0": {
+        "runtime": {
+          "FINAL.SUBASTA.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FINAL.SUBASTA/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
