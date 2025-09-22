@@ -1,45 +1,84 @@
-# VACApp
+# 🌿 VACApp – App de Turismo Responsable
 
-**IDEA:** Nombre (VACApp)  
-**Detalle:** App informativa de turismo de la ciudad
+**📝 Detalle:** App informativa sobre turismo en la ciudad, con enfoque en medio ambiente y turismo sostenible.
 
-**FORMATO:**  
-La app presenta un menú de opciones sobre áreas de turismo de la ciudad. El usuario puede seleccionar una de las opciones y se despliega un listado con toda la info correspondiente y su respectivo contacto. Se trabaja con modelo MVC almacenando las opciones en Repositorios (dejando la opción a conectar base de datos). Según el área de turismo seleccionada, la app brindará info relativa a los requerimientos legales que implica la misma con respecto al medioambiente.
+---
 
-**MODALIDAD DE TRABAJO EN EQUIPO:**  
-Idealmente se trabajará por medio de GitHub, en su defecto se subirá a un repositorio una vez finalizado.
+## 🎨 Diseño y estilo
 
-**INTEGRANTES:**  
-- Yair Nasif  
-- Lucas Marques  
-- Ornela Baldini  
+- **Colores:** Verde (`#4CAF50`), Amarillo (`#FFEB3B`), Fondo suave (`#FAFAFA`)  
+- **Tipografías:** Títulos en *Roboto Slab Bold*, texto en *Roboto Regular*  
+- **Iconos:** claros y simples para hoteles, restaurantes y balnearios  
+- **Estilo:** limpio, moderno y accesible
 
-**ÁREA:** Medio Ambiente  
-**Objetivo:** Fomentar hábitos responsables y participación ciudadana en el cuidado ambiental y/o turismo
+---
 
-**PÚBLICO Y CASOS DE USO:**  
-Turismo general/familiar principalmente de Argentina
+**Pantallas incluidas:**
+1. Pantalla principal / menú de opciones
+2. Listado de hoteles
+3. Listado de restaurantes
+4. Listado de balnearios
+5. Detalle de cada lugar (contacto, requisitos legales, ubicación)
+6. Sección de información ambiental / tips sostenibles
 
-**TECNOLOGÍA SELECCIONADA:**  
-Android 16 (API nivel 36), también conocido como Baklava, es la versión más reciente del sistema operativo móvil de Google. Elegir esta versión permite que la app esté alineada con las últimas innovaciones del ecosistema Android, incluyendo mejoras en rendimiento, seguridad y experiencia de usuario.
+---
 
-## 👁️ Frontend (View Layer)  
-**Responsable:** 1 persona  
-**Tareas:**
-- Diseñar las pantallas (XML o Jetpack Compose)  
-- Implementar navegación entre secciones (hoteles, restaurantes, balnearios)  
-- Capturar eventos de usuario (clics, selección de categoría)  
-- Mostrar los datos que vienen del backend en listas, tarjetas, etc.  
+## 🌱 Área y objetivo
 
-## 🧠 Backend (Controller + Service + Repository + Model)  
-**Responsables:** 2 personas  
-**Tareas:**
-- **Model:** Crear la superclase `LugarTuristico` y las subclases (`Hotel`, `Restaurante`, `Balneario`)  
-- **Repository:** Generar las listas de objetos simulados (los 10 mejores de cada tipo)  
-- **Service:** Encapsular la lógica para obtener y procesar los datos  
-- **Controller:** Coordinar entre la vista y el servicio, responder a eventos
+- **Área:** Medio Ambiente  
+- **Objetivo:** Fomentar hábitos responsables y promover la participación ciudadana en turismo sostenible
 
-## INTEGRANTES
+---
+
+## 👨👩👧 Público y casos de uso
+
+- **Público:** Turistas generales y familias, principalmente en Argentina.  
+- **Casos de uso:** Buscar hoteles, restaurantes, balnearios y conocer requisitos ambientales y legales.
+
+---
+
+## 📱 Tecnología
+
+- **Android 16 (API 36 – Baklava)**  
+- Ventajas: últimas mejoras en seguridad, rendimiento y experiencia de usuario.
+
+---
+
+## 👁️ Frontend (View Layer)
+
+- **Responsable:** 1 persona  
+- **Tareas:**
+  - Diseñar pantallas (XML o Jetpack Compose)  
+  - Implementar navegación entre secciones  
+  - Capturar eventos de usuario  
+  - Mostrar datos de backend en listas, tarjetas y detalles
+
+---
+
+## 🧠 Backend (Controller + Service + Repository + Model)
+
+- **Responsables:** 2 personas  
+- **Tareas:**
+  - **Model:** Superclase `LugarTuristico` + subclases `Hotel`, `Restaurante`, `Balneario`  
+  - **Repository:** Listas simuladas (top 10 por categoría)  
+  - **Service:** Lógica de obtención y procesamiento de datos  
+  - **Controller:** Coordina vista y servicio, maneja eventos
+
+---
+
+## 🔄 Flujo de navegación
+
+```text
+Pantalla principal
+ ├─ Hoteles → Listado → Detalle
+ ├─ Restaurantes → Listado → Detalle
+ └─ Balnearios → Listado → Detalle
+```  
+
+- Cada detalle incluye: contacto, ubicación en mapa y tips ambientales.
+
+## 👥 Integrantes
+
 - Yair Nasif
 - Lucas Marques
 - Ornela Baldini
