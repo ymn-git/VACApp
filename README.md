@@ -13,7 +13,7 @@
 4. Listado de hoteles
 4. Listado de gastronomía
 
-**Cada lugar tiene su información (contacto, requisitos legales, ubicación)**
+- Cada lugar tiene su información (contacto, requisitos legales, ubicación)
 ---
 
 ## 🌱 Área y objetivo
