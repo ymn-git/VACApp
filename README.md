@@ -4,23 +4,15 @@
 
 ---
 
-## 🎨 Diseño y estilo
-
-- **Colores:** Verde (`#4CAF50`), Amarillo (`#FFEB3B`), Fondo suave (`#FAFAFA`)  
-- **Tipografías:** Títulos en *Roboto Slab Bold*, texto en *Roboto Regular*  
-- **Iconos:** claros y simples para hoteles, restaurantes y balnearios  
-- **Estilo:** limpio, moderno y accesible
-
----
-
 **Pantallas incluidas:**
-1. Pantalla principal / menú de opciones
-2. Listado de hoteles
-3. Listado de restaurantes
-4. Listado de balnearios
-5. Detalle de cada lugar (contacto, requisitos legales, ubicación)
-6. Sección de información ambiental / tips sostenibles
-
+1. Pantalla de inicio / menú de opciones / mensajes de concientización ambiental
+2. Opciones: hoteles / gastronomía / playas / parques / actividades
+3. Listado de parques
+4. Listado de playas
+4. Listado de actividades
+4. Listado de hoteles
+4. Listado de gastronomía
+Cada lugar tiene su información (contacto, requisitos legales, ubicación)
 ---
 
 ## 🌱 Área y objetivo
@@ -30,7 +22,7 @@
 
 ---
 
-## 👨👩👧 Público y casos de uso
+##  Público y casos de uso
 
 - **Público:** Turistas generales y familias, principalmente en Argentina.  
 - **Casos de uso:** Buscar hoteles, restaurantes, balnearios y conocer requisitos ambientales y legales.
@@ -46,7 +38,6 @@
 
 ## 👁️ Frontend (View Layer)
 
-- **Responsable:** 1 persona  
 - **Tareas:**
   - Diseñar pantallas (XML o Jetpack Compose)  
   - Implementar navegación entre secciones  
@@ -57,7 +48,6 @@
 
 ## 🧠 Backend (Controller + Service + Repository + Model)
 
-- **Responsables:** 2 personas  
 - **Tareas:**
   - **Model:** Superclase `LugarTuristico` + subclases `Hotel`, `Restaurante`, `Balneario`  
   - **Repository:** Listas simuladas (top 10 por categoría)  
@@ -69,10 +59,14 @@
 ## 🔄 Flujo de navegación
 
 ```text
-Pantalla principal
+Pantalla de Inicio
+ ├─ Opciones 
+ ├─ Parques → Listado → Detalle
+ ├─ Playas → Listado → Detalle
+ ├─ Actividades → Listado → Detalle
  ├─ Hoteles → Listado → Detalle
- ├─ Restaurantes → Listado → Detalle
- └─ Balnearios → Listado → Detalle
+ └─ Gastronomía → Listado → Detalle
+ 
 ```  
 
 - Cada detalle incluye: contacto, ubicación en mapa y tips ambientales.
