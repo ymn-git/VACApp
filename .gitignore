@@ -1,0 +1,53 @@
+# Android/IntelliJ
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+/.idea/tasks.xml
+/.idea/dictionaries
+/.idea/caches
+/.idea/modules.xml
+/.idea/*.iml
+/.idea/assetWizardSettings.xml
+/.idea/navEditor.xml
+/.idea/shelf
+
+# Compilación y outputs
+/build
+*/build
+captures/
+.externalNativeBuild/
+
+# Archivos generados
+*.apk
+*.ap_
+*.aab
+*.hprof
+*.trace
+
+# Archivos temporales del sistema
+.DS_Store
+*.log
+*.orig
+
+# Archivos de prueba
+test-output/
+out/
+
+# Lint
+lint/intermediates/
+lint/generated/
+
+# NDK / CMake / C++
+.cxx/
+obj/
+*.so
+
+# Versiones de Jetpack Compose y Kotlin
+/captures/
+*.kotlin_module
+
+# Misc
+.gradle/
+build/
