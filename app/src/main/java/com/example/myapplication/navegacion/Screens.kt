@@ -7,9 +7,6 @@ import kotlinx.serialization.Serializable
 object Inicio
 
 @Serializable
-object Buscador
-
-@Serializable
 object Alquileres
 
 @Serializable
