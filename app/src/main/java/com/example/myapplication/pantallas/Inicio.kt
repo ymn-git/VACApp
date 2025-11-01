@@ -1,6 +1,5 @@
 package com.example.myapplication.componentes
 
-import android.graphics.drawable.Drawable
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -13,7 +12,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Text
@@ -35,15 +33,17 @@ import com.example.myapplication.navegacion.Parques
 import com.example.myapplication.navegacion.Playas
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
+import com.example.myapplication.componentes.BotonDeNavegacion
+import com.example.myapplication.componentes.FondoDePantalla
 
-val notableFont = FontFamily(Font(R.font.notable_font))
 
 //------------------------------------------------------------------------------------:
 //CODIGO PARA EL EMULADOR
 @Composable
 fun Inicio(navigate: (Any) -> Unit) {
     Box {
-        FondoDePantalla()
+        FondoDePantalla(imagenId = R.drawable.fondo_pantalla)
+
         Column(
             modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
@@ -56,9 +56,9 @@ fun Inicio(navigate: (Any) -> Unit) {
                 contentScale = ContentScale.Fit
             )
             Spacer(modifier = Modifier.height(20.dp))
-            Titulo()
+            TituloGenerico("VACAPP")
             Spacer(modifier = Modifier.height(16.dp))
-            Subtitulo()
+            SubtituloGenerico("Vacaciones en Miramar")
             Spacer(modifier = Modifier.height(24.dp))
 
             Row(
@@ -74,6 +74,7 @@ fun Inicio(navigate: (Any) -> Unit) {
                     BotonDeNavegacion(R.drawable.iconplaya, "Playas") { navigate(Playas) }
                 }
 
+
                 Column(
                     verticalArrangement = Arrangement.spacedBy(24.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
@@ -87,73 +88,6 @@ fun Inicio(navigate: (Any) -> Unit) {
         }
     }
 }
-//------------------------------------------------------------------------------------:
-// CODIGO PARA LA PREVIEW
-@Preview
-@Composable
-fun Vista() {
-    Box{
-        FondoDePantalla()
-        Column( modifier = Modifier.fillMaxWidth(),
-            horizontalAlignment = androidx.compose.ui.Alignment.CenterHorizontally)
-        {
-            Titulo()
-            Spacer(modifier = Modifier.height(24.dp))
-            Subtitulo()
-            Spacer(modifier = Modifier.height(25.dp))
-        }
-    }
-}
 //--------------------------------------------------------------------------------------:
-//FUNCIONES GENERALES
 
-@Composable
-fun BotonDeNavegacion(iconoId: Int, texto: String, onClickDestino: () -> Unit) {
-    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        FloatingActionButton(
-            onClick = onClickDestino,
-            modifier = Modifier.size(80.dp),
-            containerColor = Color.White
-        ) {
-            Image(
-                painter = painterResource(id = iconoId),
-                contentDescription = texto,
-                modifier = Modifier.size(50.dp),
-                contentScale = ContentScale.Fit
-            )
-        }
-
-        Spacer(modifier = Modifier.height(8.dp))
-
-        Box(
-            modifier = Modifier
-                .background(Color.White, shape = RoundedCornerShape(6.dp))
-                .padding(horizontal = 2.dp, vertical = 2.dp)
-        ) {
-            Text(
-                text = texto,
-                fontSize = 12.sp,
-                color = Color.Black
-            )
-        }
-    }
-}
-
-
-@Composable
-fun FondoDePantalla(){
-            Image(
-                painter = painterResource(id = R.drawable.fondo_pantalla),
-                contentDescription = null,
-                modifier = Modifier.fillMaxSize(),
-                contentScale = ContentScale.Crop
-            )
-}
-@Composable
-fun Titulo(){
-    Text("VACAPP", fontSize = 48.sp, fontFamily = notableFont)
-}
-@Composable
-fun Subtitulo(){
-    Text(text = "Vacaciones en Miramar", fontSize = 20.sp, fontFamily = notableFont)
-}
+//------------------------------------------------------------------------------------:

@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -22,8 +23,20 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.myapplication.R
 import com.example.myapplication.navegacion.Parques
+import com.example.myapplication.pantallas.PantallaGenerica
 
 @Composable
 fun Parques() {
-    Text("Pantalla de Parques")
+    PantallaGenerica(imagenId = R.drawable.fondo_parques) {
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Spacer(modifier = Modifier.height(20.dp))
+        TituloGenerico(texto = "Parques")
+        Spacer(modifier = Modifier.height(16.dp))
+
+        SubtituloGenerico(texto = "Naturaleza y aire libre")
+        }
+    }
 }
