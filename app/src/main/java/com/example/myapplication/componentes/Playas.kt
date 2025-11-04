@@ -17,6 +17,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.myapplication.R
+import com.example.myapplication.componentes.notableFont
 
 @Composable
 fun Playas(onVolverClick: () -> Unit) {
@@ -61,7 +62,8 @@ fun Playas(onVolverClick: () -> Unit) {
                 color = Color.White,
                 fontSize = 36.sp,
                 fontWeight = FontWeight.ExtraBold,
-                modifier = Modifier.padding(bottom = 24.dp)
+                modifier = Modifier.padding(bottom = 24.dp),
+                fontFamily = notableFont
             )
 
             // Cards con imagen + texto

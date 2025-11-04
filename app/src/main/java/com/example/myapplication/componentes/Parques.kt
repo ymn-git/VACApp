@@ -11,13 +11,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.myapplication.R
+import com.example.myapplication.componentes.notableFont
 import com.example.myapplication.pantallas.PantallaGenerica
 
 // PANTALLA DE PARQUES
 @Composable
 fun Parques() {
     PantallaGenerica(imagenId = R.drawable.fondo_parques) {
-        // Contenido centrado sobre el fondo
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -27,12 +27,14 @@ fun Parques() {
         ) {
             Text(
                 text = "Parques de Miramar",
-                fontSize = 32.sp,
+                fontSize = 42.sp,
+                fontFamily = notableFont
             )
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(100.dp))
             Text(
-                text = "Explorá los espacios verdes ideales para disfrutar la naturaleza 🌳",
-                fontSize = 18.sp
+                text = "`proximamente 🌳",
+                fontSize = 32.sp,
+                fontFamily = notableFont
             )
         }
     }

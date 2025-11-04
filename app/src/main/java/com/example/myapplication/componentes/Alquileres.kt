@@ -45,7 +45,7 @@ fun Alquileres(onVolverClick: () -> Unit = {}) {
             Spacer(modifier = Modifier.height(23.dp))
 
             // Título
-            TituloGenerico(texto = "ALQUILERES", color = Color.White, fontSize = 10 )
+            TituloGenerico(texto = "ALQUILERES", color = Color.White, fontSize = 30 )
 
             Spacer(modifier = Modifier.height(20.dp))
 

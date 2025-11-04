@@ -11,11 +11,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.myapplication.R
+import com.example.myapplication.componentes.notableFont
 import com.example.myapplication.pantallas.PantallaGenerica
 
 // PANTALLA DE GASTRONOMÍA
 @Composable
-fun Gastronomia() {
+fun Gastronomia(onVolverClick: () -> Unit = {}) {
     PantallaGenerica(imagenId = R.drawable.foto_comidas) {
         Column(
             modifier = Modifier
@@ -25,13 +26,18 @@ fun Gastronomia() {
             verticalArrangement = Arrangement.Center
         ) {
             Text(
-                text = "Gastronomía de Miramar",
-                fontSize = 32.sp,
+                text = "Gastronomía",
+                fontSize = 59.sp,
+                fontFamily = notableFont
+
+
             )
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(100.dp))
+            
             Text(
-                text = "Descubrí los mejores lugares para comer y disfrutar de la cocina local 🍽️",
-                fontSize = 18.sp
+                text = "Proximamente 🍽️",
+                fontSize = 38.sp,
+                fontFamily = notableFont
             )
         }
     }
