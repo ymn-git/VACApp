@@ -16,7 +16,7 @@ fun FondoDePantalla(
     Image(
         painter = painterResource(id = imagenId),
         contentDescription = null,
-        modifier = Modifier.fillMaxSize(),
-        contentScale = ContentScale.Crop
+        modifier = modifier, //  Usa el parámetro recibido
+        contentScale = contentScale //  También usa el parámetro recibido
     )
 }

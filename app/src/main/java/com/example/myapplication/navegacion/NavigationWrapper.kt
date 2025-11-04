@@ -4,26 +4,25 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.myapplication.navegacion.*
 import com.example.myapplication.componentes.*
 
 @Composable
-fun NavigationWrapper()
-{
+fun NavigationWrapper() {
     val navControlador = rememberNavController()
 
-    NavHost(navController=navControlador, startDestination=Inicio)
-    {
-        composable <Inicio>
-        {
-            Inicio {
-                    destino -> navControlador.navigate(destino)
+    NavHost(
+        navController = navControlador,
+        startDestination = "inicio"
+    ) {
+        composable("inicio") {
+            Inicio { destino ->
+                navControlador.navigate(destino)
             }
         }
-        composable <Alquileres> { Alquileres() }
-        composable <Entretenimiento> { Entretenimiento() }
-        composable <Gastronomia> { Gastronomia() }
-        composable <Parques> { Parques() }
-        composable <Playas> { Playas() }
+        composable("alquileres") { Alquileres() }
+        composable("entretenimiento") { Entretenimiento() }
+        composable("gastronomia") { Gastronomia() }
+        composable("parques") { Parques() }
+        composable("playas") { Playas }
     }
 }
