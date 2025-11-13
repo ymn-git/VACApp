@@ -79,9 +79,9 @@ fun Parques(navigate: (Any) -> Unit) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Spacer(modifier = Modifier.height(20.dp))
-            TituloGenerico(texto = "PARQUES")
+            TituloGenerico(texto = "PARQUES", color = Color.White)
             Spacer(modifier = Modifier.height(8.dp))
-            SubtituloGenerico(texto = "Naturaleza y aire libre")
+            SubtituloGenerico(texto = "Naturaleza y aire libre", color = Color.White)
             Spacer(modifier = Modifier.height(16.dp))
             
             val parques = listOf(

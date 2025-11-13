@@ -22,10 +22,10 @@ fun NavigationWrapper()
         }
         composable <Alquileres> { Alquileres() }
         composable <Entretenimiento> { Entretenimiento() }
-        composable <Gastronomia> { Gastronomia() }
+        composable <Gastronomia> { Gastronomia{ destino -> navControlador.navigate(destino)} }
         composable<Parques> {
             Parques { destino -> navControlador.navigate(destino) }
         }
-        composable <Playas> { Playas() }
+        composable <Playas> { Playa { destino -> navControlador.navigate(destino)} }
     }
 }
