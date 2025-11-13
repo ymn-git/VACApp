@@ -6,7 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.myapplication.componentes.*
 import com.example.myapplication.pantallas.Alquileres
-import com.example.myapplication.pantallas.Hoteles
+
 
 @Composable
 fun NavigationWrapper()
